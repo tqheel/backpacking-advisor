@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="header-section">
+    <h1>⚜️ {{ title() }} ⚜️</h1>
+    <p class="subtitle">Fall 2025 - Your Complete Backpacking Resource</p>
+  </div>
+  <div class="card-container">
+    <mat-card routerLink="/meal-prep" class="topic-card meal-card">
+      <div class="card-image-container">
+        <div class="image-placeholder meal-image">
+          <span class="icon">🍲</span>
+        </div>
+      </div>
+      <mat-card-header>
+        <mat-card-title>🎒 Backpacking Meal Preparation</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Learn about meal planning, mess kits, and trail food for the trip.</p>
+        <ul class="feature-list">
+          <li>🔥 Hot meal preparation</li>
+          <li>🍴 Mess kit essentials</li>
+          <li>🥾 Trail snacks & lunch</li>
+          <li>🌲 Leave No Trace</li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary">Start Learning →</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card routerLink="/gear-packing" class="topic-card gear-card">
+      <div class="card-image-container">
+        <div class="image-placeholder gear-image">
+          <span class="icon">⛺</span>
+        </div>
+      </div>
+      <mat-card-header>
+        <mat-card-title>🎒 Gear & Packing List</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Essential gear and packing tips for fall backpacking.</p>
+        <ul class="feature-list">
+          <li>🏔️ The "Big Three"</li>
+          <li>👕 Clothing layers</li>
+          <li>🛠️ The 10 Essentials</li>
+          <li>📦 Packing strategy</li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary">View Checklist →</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

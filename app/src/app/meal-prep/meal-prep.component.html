@@ -1,0 +1,86 @@
+<div class="container">
+  <h1>🎒 Backpacking Meal Preparation</h1>
+  <mat-stepper orientation="vertical" class="stepper">
+    <mat-step>
+      <ng-template matStepLabel>⚡ Introduction: Fuel for the Trail</ng-template>
+      <mat-card>
+        <mat-card-content>
+          <p><strong>🎯 The Goal:</strong> Why backpacking food is different (weight, calories, preparation).</p>
+          <p><strong>📋 Key Principles:</strong></p>
+          <ul>
+            <li><strong>🪶 Lightweight:</strong> "Ounces equal pounds, and pounds equal pain."</li>
+            <li><strong>🔋 Calorie-Dense:</strong> Maximize energy for the weight.</li>
+            <li><strong>⚡ Easy to Prepare:</strong> Minimal steps, minimal fuel, minimal cleanup.</li>
+            <li><strong>🌲 Leave No Trace (LNT):</strong> All food, wrappers, and "micro-trash" must be packed out.</li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>🍲 Part 1: Hot Meals (Dinner/Breakfast)</ng-template>
+      <mat-card>
+        <mat-card-content>
+          <p><strong>📦 What They Are:</strong> Freeze-dried or dehydrated "boil-in-bag" meals (e.g., Mountain House, Backpacker's Pantry).</p>
+          <p><strong>✅ Scout Responsibility:</strong> You are purchasing your own hot meals:</p>
+          <ul>
+            <li><strong>🌙 1 Dinner</strong> (Saturday night)</li>
+            <li><strong>☀️ 2 Breakfasts:</strong>
+              <ul>
+                <li><strong>Saturday morning:</strong> Freeze-dried/dehydrated breakfast meal (e.g., scrambled eggs 🍳, breakfast skillet).</li>
+                <li><strong>Sunday morning:</strong> Simple breakfast like instant oatmeal packets 🥣 (just add hot water).</li>
+              </ul>
+            </li>
+            <li>Check if you are buying 1-person or 2-person servings.</li>
+            <li><strong>👥 The "Meal Buddy" System:</strong> If you plan to share a 2-person meal, you *must* coordinate with your buddy. This has a direct impact on your mess kit.</li>
+          </ul>
+          <p><strong>🔥 The Process:</strong></p>
+          <ul>
+            <li>Troop provides Jet Boil backpacking stoves. The stove's only job is to boil water 💧.</li>
+            <li><strong>Boil-in-bag meals:</strong> Boil water, pour into pouch, stir thoroughly (long spoon required), seal and wait. Eat directly from the pouch.</li>
+            <li><strong>Sunday oatmeal:</strong> Pour boiling water into your insulated mug, stir, and enjoy.</li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>🍴 Part 2: Your Backpacking Mess Kit & Hydration</ng-template>
+      <mat-card>
+        <mat-card-content>
+          <p><strong>🎒 Mess Kit:</strong> Absolute minimum for eating and drinking.</p>
+          <p><strong>✅ Required Items:</strong></p>
+          <ul>
+            <li><strong>🥄 Spork or long-handled spoon</strong> (highly recommended for eating from a bag).</li>
+            <li><strong>☕ Insulated mug</strong> (plastic or metal). This is for hot chocolate, warm drinks, and your Sunday morning oatmeal breakfast.</li>
+            <li><strong>🍽️ Lightweight bowl or plate</strong> (only if sharing 2-person meal).</li>
+          </ul>
+          <p><strong>📝 Note:</strong> If you are sharing a boil-in-bag meal with another Scout, <strong>one of you must bring a plastic plate or bowl</strong> for your half of the meal. Coordinate with your meal buddy to decide who brings the bowl! 👥</p>
+          <p><strong>❌ What NOT to Bring:</strong> Bulky car-camping mess kits, plates (unless sharing), multiple cups, or heavy metal silverware.</p>
+          <p><strong>💧 Hydration:</strong> Capacity for at least 2 liters (two 1L bottles or 2L bladder).</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>🥾 Part 3: Trail Food (Snack & Lunch)</ng-template>
+      <mat-card>
+        <mat-card-content>
+          <p><strong>🎯 Purpose:</strong> Ready-to-eat, no-cook calories.</p>
+          <p><strong>🍫 Mid-Morning Snack:</strong> Quick energy boost (e.g., granola bar, trail mix, beef jerky 🥩).</p>
+          <p><strong>🌮 No-Cook Trail Lunch:</strong> Substantial meal (e.g., tortillas with tuna 🐟, cheese 🧀, peanut butter 🥜).</p>
+          <p><strong>📦 Packing:</strong> Repackage into zip-top bags.</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>🧼 Part 4: Cleanup, Hygiene, & Leave No Trace</ng-template>
+      <mat-card>
+        <mat-card-content>
+          <p><strong>🧴 Hygiene:</strong> Use hand sanitizer before/after eating.</p>
+          <p><strong>💦 Cleaning:</strong> Wipe clean with minimal water, no soap.</p>
+          <p><strong>🐻 Smellables:</strong> All food and trash packed out. Store in bear bag at night.</p>
+          <p><strong>🌲 Leave No Trace:</strong> Pack out all wrappers and micro-trash! ♻️</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-step>
+  </mat-stepper>
+  <button mat-raised-button color="primary" (click)="goBack()">🏠 Back to Home</button>
+</div>

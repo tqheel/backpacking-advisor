@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.1] - 2025-11-01
+
+### Added
+- No-refrigeration requirement added as key principle in meal planning
+- Emphasized shelf-stable food requirement throughout meal prep content
+
+### Changed
+- Updated Introduction section to include "No Refrigeration" as key principle
+- Enhanced hot meals description to explicitly state foods are shelf-stable
+- Added ice cube emoji (🧊) to reinforce no-refrigeration message
+
+### Files Modified
+- `content/outline.md`: Added no-refrigeration principle and hot meals note
+- `src/app/meal-prep/meal-prep.component.html`: Added no-refrigeration requirement
+
+---
+
 ## [1.0.0] - 2025-11-01
 
 ### Added

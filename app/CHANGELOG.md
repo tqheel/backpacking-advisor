@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.0.2] - 2025-11-01
+
+### Added
+- Specific backpack sizing guidance in gear-packing component
+- Warning about not carrying sleeping bag on outside of pack
+- Recommended pack size (50-65 liters for weekend trips)
+- Proper fit instructions for backpack hip belt
+
+### Changed
+- Expanded backpack section in "Big Three" with detailed requirements
+- Moved backpack fitting information from Introduction to Big Three section
+- Enhanced backpack advice with practical considerations (weather protection, trail safety)
+
+### Files Modified
+- `src/app/gear-packing/gear-packing.component.html`: Enhanced backpack section with sizing and safety advice
+
+---
+
 ## [1.0.1] - 2025-11-01
 
 ### Added

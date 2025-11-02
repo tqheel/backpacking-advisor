@@ -135,6 +135,12 @@
   border-color: #f5576c;
 }
 
+/* Checklist section */
+.checklist-section {
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .card-container {
@@ -148,5 +154,10 @@
   
   .header-section h1 {
     font-size: 2rem;
+  }
+
+  .checklist-section {
+    margin-top: 2rem;
+    padding: 0 0.5rem;
   }
 }

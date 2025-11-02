@@ -1,0 +1,66 @@
+<mat-card class="checklist-card">
+  <mat-card-header>
+    <mat-card-title>
+      <span class="title-icon">📋</span>
+      <span>Trip Preparation Checklist</span>
+    </mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <div class="checklist-intro no-print">
+      <p>Use this checklist to prepare for your backpacking trip. Check items as you pack them, then print for reference!</p>
+    </div>
+
+    <div class="print-header print-only">
+      <h2>⚜️ Scout Backpacking Trip Checklist ⚜️</h2>
+      <p>Fall 2025 - Camp Reeves</p>
+    </div>
+
+    <div class="categories-container">
+      @for (category of categories(); track category.name) {
+        <div class="category-section">
+          <h3 class="category-title">
+            <span class="category-icon">{{ category.icon }}</span>
+            {{ category.name }}
+          </h3>
+          <div class="items-list">
+            @for (item of category.items; track item.name; let i = $index) {
+              <div class="checklist-item">
+                <mat-checkbox 
+                  [checked]="item.checked"
+                  (change)="toggleItem(categories().indexOf(category), i)"
+                  class="item-checkbox">
+                  <span class="item-name">{{ item.name }}</span>
+                  @if (item.details) {
+                    <span class="item-details">- {{ item.details }}</span>
+                  }
+                </mat-checkbox>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="important-notes print-break">
+      <h3>⚠️ Important Reminders</h3>
+      <ul>
+        <li><strong>NO COTTON:</strong> "Cotton Kills" - use synthetics or wool only</li>
+        <li><strong>Waterproofing:</strong> Use trash compactor bag as liner inside pack</li>
+        <li><strong>Leave No Trace:</strong> Pack out all trash and micro-trash</li>
+        <li><strong>DO NOT BRING:</strong> Electronics, deodorant, axes/hatchets, pillows</li>
+      </ul>
+    </div>
+  </mat-card-content>
+  
+  <mat-card-actions class="no-print">
+    <button mat-raised-button color="primary" (click)="print()">
+      <mat-icon>print</mat-icon>
+      Print Checklist
+    </button>
+    <button mat-button (click)="resetChecklist()">
+      <mat-icon>refresh</mat-icon>
+      Reset All
+    </button>
+  </mat-card-actions>
+</mat-card>

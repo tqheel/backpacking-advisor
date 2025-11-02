@@ -11,7 +11,7 @@ The site is hosted on GitHub Pages and is automatically deployed via GitHub Acti
 - **Framework**: Angular 20.x (standalone components)
 - **Language**: TypeScript 5.8.x with strict mode enabled
 - **UI Library**: Angular Material (Indigo-Pink theme)
-- **Router**: Angular Router with lazy-loaded routes
+- **Router**: Angular Router with direct component imports
 - **Build Tool**: Angular CLI with @angular/build
 - **Testing**: Jasmine + Karma
 - **Deployment**: GitHub Pages via GitHub Actions
@@ -83,7 +83,7 @@ cd app
 ng build --configuration production
 ```
 
-Build artifacts are stored in `app/dist/app/browser/`.
+Build artifacts are stored in `app/dist/app/` with the browser output in `app/dist/app/browser/`.
 
 ### Testing
 

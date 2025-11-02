@@ -31,7 +31,7 @@ interface ChecklistCategory {
   styleUrl: './printable-checklist.component.css'
 })
 export class PrintableChecklistComponent {
-  protected readonly categories = signal<ChecklistCategory[]>([
+  readonly categories = signal<ChecklistCategory[]>([
     {
       name: 'The Big Three',
       icon: '🏔️',

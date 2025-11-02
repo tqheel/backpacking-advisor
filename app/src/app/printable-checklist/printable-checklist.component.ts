@@ -62,12 +62,16 @@ export class PrintableChecklistComponent {
       name: 'The 10 Essentials',
       icon: '🛠️',
       items: [
+        { name: 'Navigation', checked: false, details: 'Covered by leaders' },
         { name: 'Headlamp + extra batteries', checked: false },
         { name: 'Sun protection (hat)', checked: false },
         { name: 'First aid kit', checked: false, details: 'Band-aids, blister care' },
         { name: 'Knife', checked: false, details: 'Totin\' Chip required' },
+        { name: 'Fire', checked: false, details: 'Covered by leaders' },
+        { name: 'Shelter (tent)', checked: false, details: 'See "Big Three" above' },
         { name: 'Extra food', checked: false, details: '1 extra lunch or 2 energy bars' },
-        { name: 'Water bottles (2L capacity)', checked: false }
+        { name: 'Water bottles (2L capacity)', checked: false },
+        { name: 'Extra clothes', checked: false, details: 'See "Clothing" above' }
       ]
     },
     {

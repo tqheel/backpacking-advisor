@@ -17,7 +17,7 @@
     </div>
 
     <div class="categories-container">
-      @for (category of categories(); track category.name) {
+      @for (category of categories(); track category.name; let categoryIndex = $index) {
         <div class="category-section">
           <h3 class="category-title">
             <span class="category-icon">{{ category.icon }}</span>
@@ -28,7 +28,7 @@
               <div class="checklist-item">
                 <mat-checkbox 
                   [checked]="item.checked"
-                  (change)="toggleItem(categories().indexOf(category), i)"
+                  (change)="toggleItem(categoryIndex, i)"
                   class="item-checkbox">
                   <span class="item-name">{{ item.name }}</span>
                   @if (item.details) {

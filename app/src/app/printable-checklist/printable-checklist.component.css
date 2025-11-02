@@ -189,11 +189,11 @@ mat-card-actions button {
   }
 
   /* Make checkboxes visible in print */
-  ::ng-deep .mat-mdc-checkbox .mdc-checkbox__native-control {
+  :host ::ng-deep .mat-mdc-checkbox .mdc-checkbox__native-control {
     opacity: 1;
   }
 
-  ::ng-deep .mat-mdc-checkbox {
+  :host ::ng-deep .mat-mdc-checkbox {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }

@@ -4,6 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
+import { Router } from '@angular/router';
 
 interface ChecklistItem {
   name: string;
@@ -114,6 +115,8 @@ export class PrintableChecklistComponent {
     }
   ]);
 
+  constructor(private router: Router) {}
+
   print(): void {
     window.print();
   }
@@ -131,5 +134,9 @@ export class PrintableChecklistComponent {
       items: category.items.map(item => ({ ...item, checked: false }))
     }));
     this.categories.set(categories);
+  }
+
+  goBack(): void {
+    this.router.navigate(['/home']);
   }
 }

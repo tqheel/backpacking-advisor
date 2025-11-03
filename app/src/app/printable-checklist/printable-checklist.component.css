@@ -1,0 +1,219 @@
+.checklist-card {
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.title-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.checklist-intro {
+  background: #e3f2fd;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #2196f3;
+}
+
+.checklist-intro p {
+  margin: 0;
+  color: #1565c0;
+}
+
+.categories-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.category-section {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fafafa;
+}
+
+.category-title {
+  margin: 0 0 1rem 0;
+  color: #1976d2;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #1976d2;
+}
+
+.category-icon {
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checklist-item {
+  padding: 0.25rem 0;
+}
+
+.item-checkbox {
+  width: 100%;
+}
+
+.item-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.item-details {
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-left: 0.5rem;
+}
+
+.important-notes {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #fff3e0;
+  border-radius: 8px;
+  border-left: 4px solid #ff9800;
+}
+
+.important-notes h3 {
+  margin-top: 0;
+  color: #e65100;
+}
+
+.important-notes ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.important-notes li {
+  margin-bottom: 0.5rem;
+  color: #5d4037;
+}
+
+mat-card-actions {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+mat-card-actions button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Print-specific styles */
+.print-only {
+  display: none;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #333;
+  }
+
+  .print-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #000;
+  }
+
+  .print-header p {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  .checklist-card {
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  .category-section {
+    page-break-inside: avoid;
+    border: 1px solid #333;
+    margin-bottom: 1rem;
+  }
+
+  .category-title {
+    color: #000;
+    border-bottom-color: #000;
+  }
+
+  .item-name {
+    color: #000;
+  }
+
+  .item-details {
+    color: #333;
+  }
+
+  .important-notes {
+    page-break-before: auto;
+    border: 2px solid #333;
+    background: #fff;
+    margin-top: 1rem;
+  }
+
+  .important-notes h3 {
+    color: #000;
+  }
+
+  .important-notes li {
+    color: #000;
+  }
+
+  .print-break {
+    page-break-inside: avoid;
+  }
+
+  /* Make checkboxes visible in print */
+  :host ::ng-deep .mat-mdc-checkbox .mdc-checkbox__native-control {
+    opacity: 1;
+  }
+
+  :host ::ng-deep .mat-mdc-checkbox {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .checklist-card {
+    margin: 1rem;
+  }
+
+  .category-title {
+    font-size: 1.1rem;
+  }
+
+  mat-card-actions {
+    flex-direction: column;
+  }
+
+  mat-card-actions button {
+    width: 100%;
+  }
+}

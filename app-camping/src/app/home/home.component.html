@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="header-section">
+    <h1>⚜️ {{ title() }} ⚜️</h1>
+    <p class="subtitle">Camp Reeves - Your Guide for New Scouts & Families</p>
+    <p class="welcome">Welcome! This guide will help you prepare for your first Scout camping trip. Don't worry — car camping is fun and easy, and we'll walk you through everything!</p>
+  </div>
+  <div class="card-container">
+    <mat-card routerLink="/camp-meals" class="topic-card meals-card">
+      <div class="card-image-container">
+        <div class="image-placeholder meals-image">
+          <span class="icon">🍳</span>
+        </div>
+      </div>
+      <mat-card-header>
+        <mat-card-title>🍽️ Camp Cooking & Meals</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Learn how your patrol cooks together, snack rules, and mess kit basics.</p>
+        <ul class="feature-list">
+          <li>🔥 Patrol cooking & stove skills</li>
+          <li>🍫 Personal snack rules</li>
+          <li>🍴 Mess kit basics</li>
+          <li>🌲 Food safety & Leave No Trace</li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary">Start Learning →</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card routerLink="/camp-gear" class="topic-card gear-card">
+      <div class="card-image-container">
+        <div class="image-placeholder gear-image">
+          <span class="icon">⛺</span>
+        </div>
+      </div>
+      <mat-card-header>
+        <mat-card-title>🎒 Gear & What to Pack</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Everything you need to sleep comfortably, stay warm, and be prepared.</p>
+        <ul class="feature-list">
+          <li>😴 Sleeping setup</li>
+          <li>👕 Clothing & layers</li>
+          <li>🔦 Camp essentials</li>
+          <li>🎒 Packing for the trailer</li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary">View Guide →</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card routerLink="/checklist" class="topic-card checklist-card">
+      <div class="card-image-container">
+        <div class="image-placeholder checklist-image">
+          <span class="icon">📋</span>
+        </div>
+      </div>
+      <mat-card-header>
+        <mat-card-title>📋 Packing Checklist</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Printable checklist to make sure nothing gets left behind.</p>
+        <ul class="feature-list">
+          <li>😴 Sleeping gear</li>
+          <li>👕 Clothing</li>
+          <li>🔦 Camp essentials</li>
+          <li>🍽️ Food & kitchen</li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary">View Checklist →</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

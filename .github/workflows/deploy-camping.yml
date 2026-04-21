@@ -1,0 +1,39 @@
+name: Deploy New Scout Bootcamp to GitHub Pages
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'app-camping/**'
+      - '.github/workflows/deploy-camping.yml'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: app-camping/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./app-camping
+
+      - name: Build Angular app
+        run: npm run build -- --base-href /new-scout-bootcamp/
+        working-directory: ./app-camping
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.CAMPING_DEPLOY_KEY }}
+          external_repository: ${{ github.repository_owner }}/new-scout-bootcamp
+          publish_branch: gh-pages
+          publish_dir: ./app-camping/dist/app/browser

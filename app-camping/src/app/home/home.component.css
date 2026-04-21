@@ -1,0 +1,171 @@
+.container {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  min-height: 100vh;
+}
+
+.header-section {
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.header-section h1 {
+  font-size: 2.5rem;
+  color: #1b5e20;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #388e3c;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.welcome {
+  font-size: 1rem;
+  color: #4e6c50;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #43a047;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.topic-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 350px;
+  border: 3px solid #2e7d32;
+  border-radius: 12px;
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    0 12px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background: white;
+}
+
+.topic-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.3),
+    0 16px 56px rgba(0, 0, 0, 0.25);
+}
+
+.card-image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  position: relative;
+}
+
+.meals-image {
+  background: linear-gradient(135deg, #ff9800 0%, #f44336 100%);
+}
+
+.gear-image {
+  background: linear-gradient(135deg, #43a047 0%, #1b5e20 100%);
+}
+
+.checklist-image {
+  background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%);
+}
+
+.icon {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.topic-card mat-card-header {
+  padding: 1.5rem 1rem 1rem 1rem;
+  background: #f1f8e9;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.topic-card mat-card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+.topic-card mat-card-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.topic-card mat-card-content > p {
+  font-size: 1rem;
+  color: #4e6c50;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  padding: 0.5rem 0;
+  color: #2e7d32;
+  font-size: 0.95rem;
+  border-left: 3px solid #43a047;
+  padding-left: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: #f1f8e9;
+}
+
+.topic-card mat-card-actions {
+  padding: 1rem 1.5rem;
+  border-top: 2px solid #e9ecef;
+  background: #f1f8e9;
+}
+
+.meals-card:hover {
+  border-color: #ff9800;
+}
+
+.gear-card:hover {
+  border-color: #43a047;
+}
+
+.checklist-card:hover {
+  border-color: #1976d2;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    gap: 2rem;
+  }
+
+  .topic-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .header-section h1 {
+    font-size: 2rem;
+  }
+}

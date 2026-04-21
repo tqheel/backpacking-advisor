@@ -1,0 +1,72 @@
+<mat-card class="checklist-card">
+  <mat-card-header>
+    <mat-card-title>
+      <span class="title-icon">📋</span>
+      <span>New Scout Bootcamp Packing Checklist</span>
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="checklist-intro no-print">
+      <p>Use this checklist to pack for your first Scout camping trip. Check items as you pack them, then print for reference!</p>
+    </div>
+
+    <div class="print-header print-only">
+      <h2>⚜️ New Scout Bootcamp Packing Checklist ⚜️</h2>
+      <p>Camp Reeves — Troop 212</p>
+    </div>
+
+    <div class="categories-container">
+      @for (category of categories(); track category.name; let categoryIndex = $index) {
+        <div class="category-section">
+          <h3 class="category-title">
+            <span class="category-icon">{{ category.icon }}</span>
+            {{ category.name }}
+          </h3>
+          <div class="items-list">
+            @for (item of category.items; track item.name; let i = $index) {
+              <div class="checklist-item">
+                <mat-checkbox
+                  [checked]="item.checked"
+                  (change)="toggleItem(categoryIndex, i)"
+                  class="item-checkbox">
+                  <span class="item-name">{{ item.name }}</span>
+                  @if (item.details) {
+                    <span class="item-details">- {{ item.details }}</span>
+                  }
+                </mat-checkbox>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="important-notes print-break">
+      <h3>⚠️ Important Reminders</h3>
+      <div class="reminders-list">
+        <p><strong>SCOUTS PACK THEIR OWN GEAR:</strong> Use this checklist yourself — don't ask a parent to pack for you. This is your job.</p>
+        <p><strong>LABEL YOUR GEAR (YOURSELF):</strong> Write your own name on every bag, stuff sack, and piece of gear before it goes in the trailer</p>
+        <p><strong>LAYERS:</strong> April nights at Camp Reeves get cold — dress in layers and bring your warm hat and gloves</p>
+        <p><strong>FOOD SAFETY:</strong> Keep food in sealed containers or coolers — never leave food out overnight</p>
+        <p><strong>LEAVE NO TRACE:</strong> Pack out all trash, every wrapper, every scrap — leave the campsite better than you found it</p>
+        <p><strong>DO NOT BRING:</strong> Video games, tablets, expensive electronics, or valuables you'd be heartbroken to lose</p>
+      </div>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions class="no-print">
+    <button mat-raised-button color="primary" (click)="print()">
+      <mat-icon>print</mat-icon>
+      Print Checklist
+    </button>
+    <button mat-button (click)="resetChecklist()">
+      <mat-icon>refresh</mat-icon>
+      Reset All
+    </button>
+    <button mat-button (click)="goBack()">
+      <mat-icon>home</mat-icon>
+      Back to Home
+    </button>
+  </mat-card-actions>
+</mat-card>
